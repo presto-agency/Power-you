@@ -52,4 +52,4 @@ yarn build
 
 deploy to gh-pages automatically after push to branch
 
-deploy: [gh-pages](https://presto-agency.github.io/Power-you/01_index.html)
+deploy: [gh-pages](https://presto-agency.github.io/Power-you/01_empty.html)
