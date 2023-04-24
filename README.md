@@ -52,4 +52,12 @@ yarn build
 
 deploy to gh-pages automatically after push to branch
 
-deploy: [gh-pages](https://presto-agency.github.io/Power-you/01_index.html)
+deploy:
+[main](https://presto-agency.github.io/Power-you/01_index.html),
+[contact](https://presto-agency.github.io/Power-you/02_contact.html),
+[about](https://presto-agency.github.io/Power-you/03_about.html),
+[404](https://presto-agency.github.io/Power-you/04_404.html),
+[soon](https://presto-agency.github.io/Power-you/05_soon.html),
+[editor](https://presto-agency.github.io/Power-you/06_editor.html),
+[blog](https://presto-agency.github.io/Power-you/07_blog.html),
+[article](https://presto-agency.github.io/Power-you/08_article.html),
