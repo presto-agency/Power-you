@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('./inc/head.html')
+  <body>
+    @@include('./inc/preloader.html')
+    <div class="page-hero-container bg--gray-3">
+      @@include('./inc/header.html', { "heroGray": true, "showNav": false })
+      <div class="page-hero">
+        <div class="container-fluid content-wrapper">
+          <div class="page-hero__slogan">
+            <h1>Hoppala, was ist jetzt passiert?</h1>
+          </div>
+
+          <div class="page-hero__img-snack-2">
+            <img src="./img/img2.png" alt="" />
+          </div>
+          <div class="page-hero__img-main">
+            <img src="./img/guy_2.png" alt="" />
+          </div>
+          <div class="page-hero__text caption-1">
+            Bald sind wir online! Versprochen!
+          </div>
+          <div class="page-hero__cta">
+            <a href="" class="button button--primary"
+              ><span>Guten Appetit</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @@include('./inc/scripts.html')
+  </body>
+</html>
