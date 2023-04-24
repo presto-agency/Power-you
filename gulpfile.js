@@ -10,7 +10,7 @@ const webpack = require("webpack-stream");
 const fileinclude = require("gulp-file-include");
 
 function clean(done) {
-  rimraf("./dist", done);
+  rimraf("./docs", done);
 }
 
 function cssDev() {
@@ -25,7 +25,7 @@ function cssBuild() {
     .pipe(autoprefixer())
     .pipe(sass({ outputStyle: "compressed" }))
     .pipe(rename({ suffix: ".min" }))
-    .pipe(dest("./dist/css"));
+    .pipe(dest("./docs/css"));
 }
 
 function htmlDev() {
@@ -43,7 +43,7 @@ function htmlBuild() {
   return src("./src/*.html")
     .pipe(replace("main.css", "main.min.css"))
     .pipe(replace("main.build.js", "main.min.js"))
-    .pipe(dest("./dist/"));
+    .pipe(dest("./docs/"));
 }
 
 function jsDev() {
@@ -65,14 +65,14 @@ function jsBuild() {
       })
     )
     .pipe(rename({ suffix: ".min" }))
-    .pipe(dest("./dist/js"));
+    .pipe(dest("./docs/js"));
 }
 
 function staticBuild() {
   return src([
     "./src/{fonts,img,static}/**/*",
     "./src/manifest.webmanifest",
-  ]).pipe(dest("./dist/"));
+  ]).pipe(dest("./docs/"));
 }
 
 function dev() {
