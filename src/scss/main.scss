@@ -79,12 +79,20 @@ h2,
 .heading-2 {
   @include font-heading-2;
 }
-
+@media screen and  (max-width: 420px){
+  h2, .heading-2{
+    font-size: 26px;
+  }
+}
 h3,
 .heading-3 {
   @include font-heading-3;
 }
-
+@media screen and  (max-width: 420px){
+  h3, .heading-3{
+    font-size: 18px;
+  }
+}
 h4,
 .heading-4 {
   @include font-heading-4;
@@ -350,6 +358,12 @@ a.button {
     margin: 30px 0 0 0;
     display: flex;
     flex-direction: column;
+    @media screen and  (max-width: 768px){
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
   }
 
   &__slogan {
@@ -363,12 +377,25 @@ a.button {
     span {
       color: $color-brand-primary;
     }
+    @media screen and  (max-width: 768px){
+      h1{
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+    }
+    @media screen and  (max-width: 400px){
+      h1{
+        font-size: 28px;
+      }
+    }
   }
 
   &__text {
     margin-top: 20px;
     max-width: 500px;
-
+    @media screen and  (max-width: 768px){
+      margin-top: 0;
+    }
     span {
       color: $color-brand-primary;
     }
@@ -381,6 +408,9 @@ a.button {
     transition-delay: 0.3s;
     margin-top: 30px;
     order: 2;
+    @media (max-width: 767px) {
+      margin-top: 10px;
+    }
   }
 
   &__featured {
@@ -404,7 +434,7 @@ a.button {
     height: 44px;
     margin: 0 0 0 33px;
     @media (max-width: 767px) {
-      margin: 30px 0 0 0;
+      margin: 0 10px;
     }
 
     img {
@@ -421,7 +451,12 @@ a.button {
     max-height: 100%;
     padding: 0 100px 0 0;
     margin: 50px 0;
-
+    @media screen and  (max-width: 768px){
+      margin: 25px 0;
+    }
+    @media screen and  (max-width: 420px){
+      max-width: 280px;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -833,6 +868,10 @@ a.button {
       position: absolute;
       right: 16px;
       top: 0;
+      @media screen and (max-width: 768px ) {
+        height: 22px;
+        width: 3px;
+      }
     }
 
     &:after {
@@ -848,6 +887,9 @@ a.button {
 
   &__cta {
     text-align: center;
+    @media screen and (max-width: 768px ) {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -947,6 +989,11 @@ a.button {
   &__list-item {
     margin-top: 20px;
   }
+  &__cta{
+    @media screen and (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
 }
 
 .testimony {
@@ -1001,7 +1048,13 @@ a.button {
   &__sticky-container {
     text-align: center;
     margin: auto;
-
+    .d-lg-none{
+      @media screen and (max-width: 420px ){
+        img{
+          max-height: 280px;
+        }
+      }
+    }
     .sausage-1-package,
     .sausage-1,
     .sausage-2-package,
