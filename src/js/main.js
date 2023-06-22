@@ -582,5 +582,66 @@ dropMenu()
 scrollAnchors()
 navbarActive()
 
+import Swiper from 'swiper/bundle';
+
+const sliderBrands = new Swiper(".brands-slider", {
+  slidesPerView: "2",
+  spaceBetween: 50,
+  loop: true,
+  autoplay: {
+        delay: 2000,
+      },
+  breakpoints: {
+    340: {
+      slidesPerView: "2",
+      loop: true,
+    },
+    576: {
+      slidesPerView: "3",
+      loop: true,
+    },
+    768: {
+      slidesPerView: "4",
+      spaceBetween: 50,
+      loop: true,
+    },
+    992: {
+      slidesPerView: "auto",
+      autoplay: false,
+      loop: false,
+      spaceBetween: 50,
+    },
+  }
+});
+const sliderBrandsPage = new Swiper(".brands_page .brands-slider", {
+  slidesPerView: "5",
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+        delay: 2000,
+      },
+  breakpoints: {
+    340: {
+      slidesPerView: "2",
+      loop: true,
+    },
+    576: {
+      slidesPerView: "3",
+      loop: true,
+    },
+    768: {
+      slidesPerView: "4",
+      spaceBetween: 50,
+      loop: true,
+    },
+    992: {
+      slidesPerView: "auto",
+      autoplay: false,
+      loop: false,
+      spaceBetween: 60,
+    },
+  }
+});
+
 
 
